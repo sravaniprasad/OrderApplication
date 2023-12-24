@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="alert alert-info" role="alert">
+        <marquee class="scroll">***Visit 3rd floor 2nd stage for this squad, Contact the manager and opt your name to get free trips and free meals on Lucky dip. 20% offer on every item at every sunday. Get 50% discount in any item on food festival. ->>>> for any Queries....Contact: 7416631695 email:sp7313636@gmail.com, Jublihills,Hyederabad ***  </marquee>
+    
+      </div>
+    <form>
+    <form [formGroup]="login" class="form-box" (ngSubmit)="logindata()">
+         <h2>Login</h2>
+         <div class="form-group">
+            <label>Email</label><small class="text-danger">*</small>
+            <input type="email" formControlName="email" class="form-control mb-3 mt-3" placeholder="Enter email" />
+             <small *ngIf="login.get('email')?.invalid && login.get('email')?.touched" class="text-danger"> email required</small> 
+         </div>
+
+         <div class="form-group">
+            <label>Password</label><small class="text-danger">*</small>
+            <input [type]="showpassword ?'text':'password'" formControlName="password" class="form-control mb-3 mt-3" placeholder="Password" />
+            <i (click)="Show()" class="fa-solid fa-eye eye" *ngIf="!showpassword"></i>
+            <i (click)="Show()" class="fa-sharp fa-solid fa-eye-slash eye" *ngIf="showpassword"></i>
+            <small *ngIf="login.get('password')?.invalid && login.get('password')?.touched" class="text-danger"> password required</small> 
+           <br/> <small *ngIf="login.get('password')?.invalid && login.get('password')?.touched" class="text-danger"> Password size must be in 10 </small> 
+         </div>
+
+          New User? <a  routerLink="/signup">SignUp</a>
+         <br/>
+         <button type="submit" [disabled]="login.invalid" (click)="openpopup()" class="btn btn-secondary">Login</button>
+
+         <div class="popup" *ngIf="show">
+          <img src="http://www.clipartbest.com/cliparts/ecM/jkp/ecMjkp7cn.png" />
+          <h2>ThankYou!!!</h2>
+          <p>Your details has been registered successfully</p>
+          <button type="button">OK</button>
+       </div>
+    </form> 
+    </form>
+</div>
+
+

@@ -1,0 +1,38 @@
+<div class="container">
+   <div class="alert alert-info" role="alert">
+      <marquee class="scroll">***Visit 3rd floor 2nd stage for this squad, Contact the manager and opt your name to get free trips and free meals on Lucky dip. 20% offer on every item at every sunday. Get 50% discount in any item on food festival. ->>>> for any Queries....Contact: 7416631695 email:sp7313636@gmail.com, Jublihills,Hyederabad ***  </marquee>
+  
+    </div>
+    <form [formGroup]="signup" class="form-box1" (ngSubmit)="signupdata(signup.value)">
+         <h2>Register Here</h2>
+         <div class="form-group">
+            <label>Name</label><small class="text-danger">*</small>
+            <input type="text" formControlName="firstname" class="form-control mb-3 mt-3" placeholder="Enter first name" />
+            <small *ngIf="signup.get('firstname')?.invalid && signup.get('firstname')?.touched" class="text-danger"> firstname is mandatory</small>
+         </div>
+
+
+         <div class="form-group">
+            <label>Location</label><small class="text-danger">*</small>
+            <input type="text" formControlName="location" class="form-control mb-3 mt-3" placeholder="Enter location" />
+            <small *ngIf="signup.get('location')?.invalid && signup.get('location')?.touched" class="text-danger"> Location should be mandatory</small>
+         </div>
+         
+         <div class="form-group">
+            <label>Email </label><small class="text-danger">*</small>
+            <input type="email" formControlName="email" class="form-control mb-3 mt-3" placeholder="Enter email" />
+            <small *ngIf="signup.get('email')?.invalid && signup.get('email')?.touched" class="text-danger"> Invalid  email</small>
+         </div>
+
+         <div class="form-group">
+            <label>Password</label><small class="text-danger">*</small>
+            <input type="password" formControlName="password" class="form-control mb-3 mt-3" placeholder="Password" />
+            <small *ngIf="signup.get('password')?.invalid && signup.get('password')?.touched" class="text-danger"> Enter your password with maximum length 10 </small>
+         </div>
+         
+         <span> Already have an Account?  <a routerLink="/login">SignIn</a></span>
+         <br/>
+         <button type="submit"  [disabled]="signup.invalid" class="btn btn-secondary">Sign up</button>
+        
+    </form>
+</div>

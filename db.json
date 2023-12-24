@@ -1,0 +1,39 @@
+{
+  "signupusers": [
+    {
+      "firstname": "sdsdfsdfs",
+      "location": "dsfdgdfh",
+      "email": "sfes@cfdg",
+      "password": "sssssssssssssssss",
+      "id": 1
+    },
+    {
+      "firstname": "sravani",
+      "location": "kadapa",
+      "email": "sravaniprasad939@gmail.com",
+      "password": "sravaniprasad1",
+      "id": 2
+    },
+    {
+      "firstname": "maya",
+      "location": "kadapa",
+      "email": "maya@gmail.com",
+      "password": "mayamayamaya",
+      "id": 3
+    },
+    {
+      "firstname": "sravani",
+      "location": "kadapa",
+      "email": "sravaniprasad939@gmail.com",
+      "password": "Sravaniprasad1435",
+      "id": 4
+    },
+    {
+      "firstname": "sravani",
+      "location": "kadapa",
+      "email": "s@gmail.com",
+      "password": "Sravani@123",
+      "id": 5
+    }
+  ]
+}

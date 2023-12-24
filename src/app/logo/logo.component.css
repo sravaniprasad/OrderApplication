@@ -1,0 +1,13 @@
+.imgdisplay{
+    display: block;
+    padding: 20px;
+    
+    display: flex;
+    flex-direction: row;
+}
+img1{
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+
+}
